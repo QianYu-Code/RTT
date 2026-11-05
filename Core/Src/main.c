@@ -26,6 +26,8 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 #include "elog.h"
+
+#include "app_elog.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -77,7 +79,6 @@ PUTCHAR_PROTOTYPE
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -100,15 +101,15 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  app_elog_init();
   /* USER CODE END 2 */
 
   /* Init scheduler */
-  osKernelInitialize();  /* Call init function for freertos objects (in freertos.c) */
-  MX_FREERTOS_Init();
+  //osKernelInitialize();  /* Call init function for freertos objects (in freertos.c) */
+  //MX_FREERTOS_Init();
 
   /* Start scheduler */
-  osKernelStart();
+  //osKernelStart();
   /* We should never get here as control is now taken by the scheduler */
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -117,6 +118,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+      test_elog();
+      HAL_Delay(1000);
+      printf("Hello world!");
   }
   /* USER CODE END 3 */
 }

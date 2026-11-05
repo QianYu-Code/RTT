@@ -336,7 +336,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F411xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\Middlewares\easylogger\inc;..\Middlewares\RTT</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Middlewares/Third_Party/FreeRTOS/Source/include;../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2;../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;..\Middlewares\easylogger\inc;..\Middlewares\RTT;..\Middlewares\easylogger\app</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -604,6 +604,11 @@
               <FileName>elog_utils.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Middlewares\easylogger\src\elog_utils.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_elog.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\easylogger\app\app_elog.c</FilePath>
             </File>
           </Files>
         </Group>
